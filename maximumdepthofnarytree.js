@@ -31,11 +31,12 @@ function maxDepth(root) {
     }
     
     let depth = 0
-    console.log(root.children)
+    
     for (let child of root.children) {
         depth = Math.max(depth, maxDepth(child))
     }
 
+    //Adds +1 to depth every time a new level is reached
     return depth + 1
 }
 
